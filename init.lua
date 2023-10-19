@@ -22,7 +22,7 @@ function savoia_s21.register_parts_method(self)
     self.cabin:set_bone_position("fuel", {x=3,y=3.95,z=-4.05}, {x=0,y=0,z=0})
     self.cabin:set_bone_position("altimeter_pt_1", {x=-2.66,y=4.6,z=-4.05}, {x=0,y=0,z=0})
     self.cabin:set_bone_position("altimeter_pt_2", {x=-2.66,y=4.6,z=-4.05}, {x=0,y=0,z=0})
-    self.cabin:set_bone_position("power", {x=1.05,y=4.6,z=-4.05}, {x=0,y=0,z=0})
+    self.cabin:set_bone_position("power", {x=1.02,y=4.6,z=-4.05}, {x=0,y=0,z=0})
     self.cabin:set_bone_position("climber", {x=0,y=4.6,z=-3}, {x=0,y=0,z=0})
 
     local altimeter = airutils.plot_altimeter_gauge(self, 500, 40, 25)
@@ -80,7 +80,7 @@ function savoia_s21.step_additional_function(self)
     self.cabin:set_bone_position("altimeter_pt_2", {x=-2.66,y=4.6,z=-4.05}, {x=0,y=0,z=minute_angle})
 
     local power_indicator_angle = airutils.get_gauge_angle(self._power_lever/6.5)
-    self.cabin:set_bone_position("power", {x=1.05,y=4.6,z=-4.05}, {x=0,y=0,z=power_indicator_angle-90})
+    self.cabin:set_bone_position("power", {x=1.02,y=4.6,z=-4.05}, {x=0,y=0,z=power_indicator_angle-90})
 
     self.cabin:set_bone_position("climber", {x=0,y=4.6,z=-3}, {x=0,y=0,z=0})
 
@@ -154,22 +154,22 @@ savoia_s21.plane_properties = {
     _enable_fire_explosion = true,
     _longit_drag_factor = 0.120*0.120,
     _later_drag_factor = 2.0,
-    _wing_angle_of_attack = 1.5,
+    _wing_angle_of_attack = 1.8,
     _wing_span = 15, --meters
     _min_speed = 8,
-    _max_speed = 12,
+    _max_speed = 10,
     _max_fuel = 10,
-    _speed_not_exceed = 30,
+    _speed_not_exceed = 20,
     _damage_by_wind_speed = 2,
     _hard_damage = true,
-    _min_attack_angle = -1.5,
+    _min_attack_angle = -2.5,
     _max_attack_angle = 90,
     _elevator_auto_estabilize = 100,
     _tail_lift_min_speed = 2,
-    _tail_lift_max_speed = 8,
-    _max_engine_acc = 12,
+    _tail_lift_max_speed = 3,
+    _max_engine_acc = 10,
     _tail_angle = 6, --degrees
-    _lift = 15,
+    _lift = 20,
     _trunk_slots = 2, --the trunk slots
     _rudder_limit = 30.0,
     _elevator_limit = 20.0,
