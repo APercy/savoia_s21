@@ -215,6 +215,7 @@ savoia_s21.plane_properties = {
     --_custom_pilot_formspec = airutils.pilot_formspec,
     _custom_step_additional_function = savoia_s21.step_additional_function,
     _ground_friction = 0.965,
+    _splash_x_position = 7,
 
     get_staticdata = airutils.get_staticdata,
     on_deactivate = airutils.on_deactivate,
